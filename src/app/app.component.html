@@ -9,14 +9,13 @@
 			<li class="nav-item" *ngIf="showModeratorBoard"><a href="/mod" class="nav-link" routerLink="mod">Seller Board</a></li>
 			<li class="nav-item"><a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">Product</a></li>
 		</ul>
-		<ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
-			
-			<li class="nav-item"><a href="/login" class="nav-link" routerLink="login">Login</a></li>
-		</ul>
-    <ul class="navbar-nav " *ngIf="isLoggedIn">
-			<li class="nav-item"><a href="/order" class="nav-link" routerLink="order">Profile</a></li>
 
+		<ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+			<li class="nav-item"><a href="/login" class="nav-link" routerLink="login">Login</a></li>
+      <li class="nav-item"><a href="/adminlogin" class="nav-link" routerLink="adminlogin">Admin</a></li>
 		</ul>
+
+    
     <ul class="navbar-nav " *ngIf="isLoggedIn">
 			<li class="nav-item"><a href="/cart" class="nav-link" routerLink="cart">Cart</a></li>
 		</ul>

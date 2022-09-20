@@ -19,6 +19,12 @@ export class AuthService {
       password: credentials.password
     }, httpOptions);
   }
+  adminlogin(credentials): Observable<any> {
+    return this.http.post(AppConstants.AUTH_API + 'authenticate/admin', {
+      username: credentials.username,
+      password: credentials.password
+    }, httpOptions);
+  }
 
   register(user): Observable<any> {
     return this.http.post(AppConstants.AUTH_API + 'register', {

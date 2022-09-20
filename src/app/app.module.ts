@@ -21,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
 
 import { OrderComponent } from './order/order.component';
 import { PaymentComponent } from './payment/payment.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { PaymentComponent } from './payment/payment.component';
     BoardUserComponent,
     CartComponent,
     OrderComponent,
-    PaymentComponent
+    PaymentComponent,
+    AdminloginComponent
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { CartComponent } from './cart/cart.component';
 import { OrderComponent } from './order/order.component';
 import { PaymentComponent } from './payment/payment.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'home/user', component: BoardUserComponent},
   { path: 'pay', component: PaymentComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'adminlogin', component: AdminloginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login/register', component: RegisterComponent },
   { path:  'register/login',component:LoginComponent},
