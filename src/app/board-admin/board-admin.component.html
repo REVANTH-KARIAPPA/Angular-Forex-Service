@@ -1,0 +1,11 @@
+<div [ngClass]="['product']">
+  <div *ngFor='let product of products'>
+     <img [src]='product.img'/>
+     <h5>{{product.productName}}</h5>
+     <h6>₹{{product.prize}}</h6>
+     <button (click)='appfetch(product.productId)'>Approve</button>
+    <button (click)='delfetch(product.productId)'>Disapprove</button>
+
+
+  </div>
+</div>

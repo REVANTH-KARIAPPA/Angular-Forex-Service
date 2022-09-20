@@ -1,0 +1,42 @@
+.container{
+  background-color: rgb(85, 134, 169);
+  opacity: 0.9;
+  color: aliceblue;
+  text-decoration-color: black;
+}
+.green{
+  color: green;
+  font-weight: bold;
+}
+.pbutton {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+}
+
+.dbutton {
+  background-color: #db3c3c; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+}
+.profile{
+  color: rgb(127, 183, 223);
+  text-shadow: #4CAF50;
+  text-decoration: #4CAF50;
+}

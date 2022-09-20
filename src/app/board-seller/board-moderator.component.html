@@ -1,0 +1,37 @@
+<div>
+	<h6 class="text-muted py-5">ADD products</h6>
+  <div class="col-md-12" >
+	<div class="card card-container">
+  
+		  <form name="form" (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
+			  <div class="form-group">
+				  <label for="productName">Product Name</label> <input type="text" class="form-control" name="productName" [(ngModel)]="form.productName"  #productName="ngModel" />
+  
+			  </div>
+			  <div class="form-group">
+				  <label for="img">Image</label> <input type="text" class="form-control" name="img" [(ngModel)]="form.img" #img="ngModel" />
+  
+			  </div>
+		<div class="form-group">
+				  <label for="prize">Prize</label> <input type="text" class="form-control" name="prize" [(ngModel)]="form.prize" #prize="ngModel" />
+  
+			  </div>
+			  <div class="form-group">
+				  <button class="btn btn-primary btn-block">Add</button>
+		  <div class="overlay" *ngIf="popup">
+			<div class="popup">
+				<h4>Product Added</h4>
+				<a class="close" (click)="popup = false">&times;</a>
+  
+			</div>
+		</div>
+			  </div>
+			  <div class="form-group">
+  
+			  </div>
+  
+		  </form>
+  
+	  </div>
+  </div>
+  </div>
