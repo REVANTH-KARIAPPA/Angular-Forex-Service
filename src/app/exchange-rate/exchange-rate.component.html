@@ -1,5 +1,5 @@
 <div>
-
+  <button class="abutton" [routerLink]="['currency']">Add Currency</button>
   <div class="container" *ngFor='let currency of currencies'>
 
     <table class="table">
@@ -19,10 +19,29 @@
           {{currency.exchangeRate}}
         </td>
         <td rowspan="">
-          <button class="dbutton" (click)="onDelete(user.id)">Update Exchange Rate</button>
+          <button class="dbutton" (click)="openModal(currency,currency.currencyId)">Update Exchange Rate</button>
         </td>
       </tr>
+      <div class="jw-modal-wrapper" id="modal-1">
+      <div class="jw-modal">
+        <div class="jw-modal-body">
 
+            <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+
+              <div class="form-group">
+                <label for="rate">Exchange Rate of {{exchange.currencyName}}</label>
+                <input type="number" onkeypress="return event.charCode >= 48" min="0.1" class="form-control" name="rate" [(ngModel)]="exchange.exchangeRate" required #rate="ngModel" />
+
+              </div>
+              <button class="dbutton" >Update exchange Rate</button>
+              <button class="dbutton" (click)="closeModal()">Close</button>
+            </form>
+
+
+        </div>
+    </div>
+    <div class="jw-modal-background"></div>
+  </div>
     </table>
 
   </div>

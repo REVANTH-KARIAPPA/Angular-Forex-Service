@@ -1,0 +1,40 @@
+<div class="col-md-12">
+	<div class="card card-container">
+		<form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+
+
+			<div class="form-group">
+				<label for="amount">Amount</label>
+        <input type="number" onkeypress="return event.charCode >= 48" min="1" class="form-control" name="amount" [(ngModel)]="form.amount" required #amount="ngModel" />
+				<div class="alert alert-danger" role="alert" *ngIf="f.submitted && amount.invalid">Amount is required!</div>
+			</div>
+
+      <div class="form-group">
+				<label for="fromCurrency" >From Currency</label>
+        <select  class="form-control" name="fromCurrency" type="text" [(ngModel)]="form.fromCurrency" (change)="selected()" >
+          <option disabled >Choose Currency</option>
+          <option *ngFor="let c of currencies" [ngValue]="c.currency"  >{{c.currency}}</option>
+      </select>
+			</div>
+
+
+      <div class="form-group">
+				<label for="toCurrency" >From Currency</label>
+        <select  class="form-control" name="toCurrency" type="text" [(ngModel)]="form.toCurrency" (change)="selected()" >
+          <option disabled >Choose Currency</option>
+          <option *ngFor="let c of currencies" [ngValue]="c.currency"  >{{c.currency}}</option>
+      </select>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-primary btn-block">Convert</button>
+			</div>
+      <div class="form-group">
+        <h4 class="form-control" >Amount={{amountDto.amount}}</h4>
+      </div>
+
+		</form>
+
+
+	</div>
+</div>
+

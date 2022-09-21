@@ -11,6 +11,8 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { MoneyTransferComponent } from './money-transfer/money-transfer.component';
 import { ExchangeRateComponent } from './exchange-rate/exchange-rate.component';
+import { ConverterComponent } from './converter/converter.component';
+import { AddexchangeComponent } from './addexchange/addexchange.component';
 
 
 
@@ -28,6 +30,8 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'usermanagement', component: UserManagementComponent },
   { path: 'exchangerate', component: ExchangeRateComponent },
+  { path: 'exchangerate/currency', component: AddexchangeComponent },
+  { path: 'converter', component: ConverterComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
@@ -36,4 +40,6 @@ const routes: Routes = [
   exports: [RouterModule],
   declarations: []
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+}

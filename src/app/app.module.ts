@@ -20,6 +20,8 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { MoneyTransferComponent } from './money-transfer/money-transfer.component';
 import { ExchangeRateComponent } from './exchange-rate/exchange-rate.component';
+import { ConverterComponent } from './converter/converter.component';
+import { AddexchangeComponent } from './addexchange/addexchange.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { ExchangeRateComponent } from './exchange-rate/exchange-rate.component';
     AdminloginComponent,
     UserManagementComponent,
     MoneyTransferComponent,
-    ExchangeRateComponent
+    ExchangeRateComponent,
+    ConverterComponent,
+    AddexchangeComponent
   ],
   imports: [
     BrowserModule,
