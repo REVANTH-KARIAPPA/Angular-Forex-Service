@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AppConstants } from '../common/app.constants';
 import { IProduct } from '../board-customer/product';
-import { addProduct } from '../board-seller/addproduct';
+
 import { IPayment } from '../payment/payment';
 
 const httpOptions = {
@@ -46,9 +46,7 @@ export class ProductService {
     return this.http.delete(AppConstants.API_BASE_URL+'order/'+oid+'/user/'+uid,httpOptions);
   }
 
-   addProduct(product:addProduct):Observable<any>{
-    return this.http.post(AppConstants.API_URL+'product/create',product,httpOptions)
-   }
+  
 
 
 

@@ -11,7 +11,6 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
-import { BoardModeratorComponent } from './board-seller/board-moderator.component';
 import { BoardUserComponent } from './board-customer/board-user.component';
 
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
@@ -32,7 +31,6 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     HomeComponent,
     ProfileComponent,
     BoardAdminComponent,
-    BoardModeratorComponent,
     BoardUserComponent,
     CartComponent,
     OrderComponent,

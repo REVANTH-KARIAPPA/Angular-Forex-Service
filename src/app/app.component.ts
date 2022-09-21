@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   private roles: string[];
   isLoggedIn = false;
   showAdminBoard = false;
-  showModeratorBoard = false;
+  showUserBoard = false;
   username: string;
 
   constructor(private tokenStorageService: TokenStorageService,
@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
                 history.pushState(null, null, window.location.href);
                 this.location.onPopState(() => {
                   history.pushState(null, null, window.location.href);
-                }); 
+                });
               }
 
   ngOnInit(): void {
@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
       this.roles = user.roles;
 
       this.showAdminBoard = this.roles.includes('ADMIN');
-      this.showModeratorBoard = this.roles.includes('SELLER');
+      this.showUserBoard = this.roles.includes('USER');
 
       this.username = user.displayName;
     }

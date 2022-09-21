@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AppConstants } from '../common/app.constants';
 import { AuthService } from '../_services/auth.service';
 import { TokenStorageService } from '../_services/token-storage.service';
 import { UserService } from '../_services/user.service';
@@ -17,10 +16,7 @@ export class AdminloginComponent implements OnInit {
   isLoginFailed = false;
   errorMessage = '';
   currentUser: any;
-  googleURL = AppConstants.GOOGLE_AUTH_URL;
-  facebookURL = AppConstants.FACEBOOK_AUTH_URL;
-  githubURL = AppConstants.GITHUB_AUTH_URL;
-  linkedinURL = AppConstants.LINKEDIN_AUTH_URL;
+
 
   constructor(private authService: AuthService,
     private tokenStorage: TokenStorageService,
@@ -48,12 +44,12 @@ export class AdminloginComponent implements OnInit {
   		  );
   	}
   	else if(error){
-  		this.errorMessage = error;
-	    this.isLoginFailed = true;
-  	}
-    if (this.isLoggedIn) {
-      this.router.navigate(['home']);
-     }
+   	 this.errorMessage = error;
+	   this.isLoginFailed = true;
+  }
+    // if (this.isLoggedIn) {
+    //   this.router.navigate(['home']);
+    //  }
   }
 
   onSubmit(): void {
@@ -74,7 +70,7 @@ export class AdminloginComponent implements OnInit {
 	this.isLoginFailed = false;
 	this.isLoggedIn = true;
 	this.currentUser = this.tokenStorage.getUser();
-    window.location.reload();
+   // window.location.reload();
   }
 
 }
