@@ -3,8 +3,9 @@
 
 		<ul class="navbar-nav mr-auto" routerLinkActive="active">
 			<li class="nav-item"><a href="/home" class="nav-link" routerLink="home">Home </a></li>
-			<li class="nav-item" *ngIf="showAdminBoard"><a href="/user/management" class="nav-link" routerLink="user/management">User Management</a></li>
-			<li class="nav-item" *ngIf="showUserBoard"><a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">Money Transfer</a></li>
+			<li class="nav-item" *ngIf="showAdminBoard"><a href="/usermanagement" class="nav-link" routerLink="usermanagement">User Management</a></li>
+      <li class="nav-item" *ngIf="showAdminBoard"><a href="/exchangerate" class="nav-link" routerLink="exchangerate">Exchange Rate</a></li>
+			<li class="nav-item" *ngIf="showUserBoard"><a href="/moneytransfer" class="nav-link" *ngIf="isLoggedIn" routerLink="moneytransfer">Money Transfer</a></li>
 		</ul>
 
 		<ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
@@ -14,7 +15,7 @@
 
 
     <ul class="navbar-nav " *ngIf="isLoggedIn">
-			<li class="nav-item"><a href="/cart" class="nav-link" routerLink="cart">Cart</a></li>
+			<li class="nav-item" *ngIf="showUserBoard"><a href="/cart" class="nav-link" routerLink="cart">Add Account</a></li>
 		</ul>
 
     <ul class="navbar-nav" *ngIf="isLoggedIn">

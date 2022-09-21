@@ -6,30 +6,28 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BoardUserComponent } from './board-customer/board-user.component';
-import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { CartComponent } from './cart/cart.component';
-import { OrderComponent } from './order/order.component';
-import { PaymentComponent } from './payment/payment.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { UserManagementComponent } from './user-management/user-management.component';
+import { MoneyTransferComponent } from './money-transfer/money-transfer.component';
+import { ExchangeRateComponent } from './exchange-rate/exchange-rate.component';
 
 
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'home/user', component: BoardUserComponent},
-  { path: 'pay', component: PaymentComponent },
   { path: 'login', component: LoginComponent },
   { path: 'adminlogin', component: AdminloginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login/register', component: RegisterComponent },
   { path:  'register/login',component:LoginComponent},
   { path: 'profile', component: ProfileComponent },
-  { path: 'user', component: BoardUserComponent },
+  { path: 'moneytransfer', component: MoneyTransferComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'order',  component: OrderComponent},
-  { path: 'order/payment/:id',  component: PaymentComponent},
   { path: 'cart', component: CartComponent },
-  { path: 'user/management', component: BoardAdminComponent },
+  { path: 'usermanagement', component: UserManagementComponent },
+  { path: 'exchangerate', component: ExchangeRateComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

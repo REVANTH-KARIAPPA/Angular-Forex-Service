@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { AppConstants } from '../common/app.constants';
 import { IProduct } from '../board-customer/product';
 
-import { IPayment } from '../payment/payment';
 
 const httpOptions = {
 		  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -46,7 +45,7 @@ export class ProductService {
     return this.http.delete(AppConstants.API_BASE_URL+'order/'+oid+'/user/'+uid,httpOptions);
   }
 
-  
+
 
 
 
@@ -67,11 +66,7 @@ export class ProductService {
     return this.http.delete(AppConstants.API_URL+'product/'+pId,httpOptions);
   }
 
-  doPayment(paymentId:number,orderId:number,payment:IPayment):Observable<any>{
-    return this.http.put(AppConstants.API_BASE_URL+'payment/'+paymentId+'/order/'+orderId,payment,httpOptions);
-  }
-  orderById(oId:number):Observable<any>{
-    return this.http.get(AppConstants.API_BASE_URL+'order/id/'+oId,httpOptions);
-  }
+
+ 
 
 }

@@ -1,0 +1,31 @@
+<div>
+
+  <div class="container" *ngFor='let currency of currencies'>
+
+    <table class="table">
+      <tr>
+        <th colspan="">Currency</th>
+        <th colspan="">Currency Name</th>
+        <th colspan="">Exchange Rate</th>
+      </tr>
+      <tr>
+        <td rowspan="">
+          {{currency.currency}}
+        </td>
+        <td rowspan="">
+          {{currency.currencyName}}
+        </td>
+        <td rowspan="">
+          {{currency.exchangeRate}}
+        </td>
+        <td rowspan="">
+          <button class="dbutton" (click)="onDelete(user.id)">Update Exchange Rate</button>
+        </td>
+      </tr>
+
+    </table>
+
+  </div>
+  </div>
+
+

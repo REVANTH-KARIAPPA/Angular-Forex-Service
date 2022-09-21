@@ -11,6 +11,7 @@
 					<div *ngIf="username.errors.maxlength">Display Name must be at most 20 characters</div>
 				</div>
 			</div>
+
 			<div class="form-group">
 				<label for="email">Email</label> <input type="email" class="form-control" name="email" [(ngModel)]="form.email" required email #email="ngModel" />
 				<div class="alert-danger" *ngIf="f.submitted && email.invalid">
@@ -18,6 +19,16 @@
 					<div *ngIf="email.errors.email">Email must be a valid email address</div>
 				</div>
 			</div>
+      <div class="form-group">
+        <label for="phone">Mobile</label>
+           <input type="text" class="form-control" name="phone" [(ngModel)]="form.phone" required minlength="10"
+            maxlength="10" #phone="ngModel" />
+          <div class="alert-danger" *ngIf="f.submitted && phone.invalid">
+            <div *ngIf="phone.errors.required">Mobile number is required</div>
+            <div *ngIf="phone.errors.minlength">Mobile number must be at least 10 characters</div>
+            <div *ngIf="phone.errors.maxlength">Mobile number must be at most 10 characters</div>
+          </div>
+        </div>
 			<div class="form-group">
 				<label for="password">Password</label> <input type="password" class="form-control" name="password" [(ngModel)]="form.password" required minlength="6"
 					#password="ngModel" />

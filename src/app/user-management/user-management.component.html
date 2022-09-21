@@ -1,0 +1,30 @@
+<div>
+
+  <div class="container" *ngFor='let user of users'>
+
+    <table class="table">
+      <tr>
+        <th colspan="">Name</th>
+        <th colspan="">email</th>
+        <th colspan="">mobile</th>
+      </tr>
+      <tr>
+        <td rowspan="">
+          {{user.username}}
+        </td>
+        <td rowspan="">
+          {{user.email}}
+        </td>
+        <td rowspan="">
+          {{user.phone}}
+        </td>
+        <td rowspan="">
+          <button class="dbutton" (click)="onDelete(user.id)">Delete</button>
+        </td>
+      </tr>
+
+    </table>
+
+  </div>
+  </div>
+

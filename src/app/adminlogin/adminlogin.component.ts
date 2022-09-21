@@ -47,9 +47,9 @@ export class AdminloginComponent implements OnInit {
    	 this.errorMessage = error;
 	   this.isLoginFailed = true;
   }
-    // if (this.isLoggedIn) {
-    //   this.router.navigate(['home']);
-    //  }
+  if (this.isLoggedIn) {
+      this.router.navigate(['home']);
+     }
   }
 
   onSubmit(): void {
@@ -70,7 +70,7 @@ export class AdminloginComponent implements OnInit {
 	this.isLoginFailed = false;
 	this.isLoggedIn = true;
 	this.currentUser = this.tokenStorage.getUser();
-   // window.location.reload();
+   window.location.reload();
   }
 
 }

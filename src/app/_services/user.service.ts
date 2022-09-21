@@ -16,16 +16,14 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getPublicContent(): Observable<any> {
-    return this.http.get(AppConstants.API_URL + 'all', { responseType: 'text' });
+    return this.http.get(AppConstants.API_URL + 'all', httpOptions);
   }
 
   getUserBoard(): Observable<any> {
     return this.http.get(AppConstants.API_URL + 'customer', { responseType: 'text' });
   }
 
-  getModeratorBoard(): Observable<any> {
-    return this.http.get(AppConstants.API_URL + 'seller', { responseType: 'text' });
-  }
+
 
   getAdminBoard(): Observable<any> {
     return this.http.get(AppConstants.API_URL + 'admin', { responseType: 'text' });
@@ -33,5 +31,8 @@ export class UserService {
 
   getCurrentUser(): Observable<any> {
     return this.http.get(AppConstants.API_URL + 'user/me', httpOptions);
+  }
+  deleteUser(uId:number):Observable<any>{
+    return this.http.delete(AppConstants.API_URL+uId,httpOptions);
   }
 }

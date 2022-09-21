@@ -10,17 +10,16 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
-import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardUserComponent } from './board-customer/board-user.component';
 
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { CartComponent } from './cart/cart.component';
 
 import { FooterComponent } from './footer/footer.component';
-
-import { OrderComponent } from './order/order.component';
-import { PaymentComponent } from './payment/payment.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { UserManagementComponent } from './user-management/user-management.component';
+import { MoneyTransferComponent } from './money-transfer/money-transfer.component';
+import { ExchangeRateComponent } from './exchange-rate/exchange-rate.component';
 
 
 @NgModule({
@@ -30,12 +29,12 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     RegisterComponent,
     HomeComponent,
     ProfileComponent,
-    BoardAdminComponent,
     BoardUserComponent,
     CartComponent,
-    OrderComponent,
-    PaymentComponent,
-    AdminloginComponent
+    AdminloginComponent,
+    UserManagementComponent,
+    MoneyTransferComponent,
+    ExchangeRateComponent
   ],
   imports: [
     BrowserModule,
