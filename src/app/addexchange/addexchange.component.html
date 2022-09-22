@@ -1,4 +1,5 @@
 <div class="col-md-12">
+  <h3 class="center">Add Currency</h3>
 	<div class="card card-container">
 		<form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
 
@@ -23,7 +24,7 @@
 
       <div class="form-group">
 				<label for="exchangeRate">Exchange Rate</label>
-        <input type="number" onkeypress="return event.charCode >= 48" min="1"
+        <input type="number" onkeypress="return event.charCode >= 48" min="0.01" step="0.1"
         class="form-control" name="exchangeRate" [(ngModel)]="form.exchangeRate"
         required #exchangeRate="ngModel" />
 
@@ -42,6 +43,12 @@
 
 
 		</form>
+    <div class="overlay" *ngIf="popup">
+      <div class="popup">
+        <h4>Currency Added</h4>
+        <a class="close" (click)="popup = false">&times;</a>
+      </div>
+    </div>
 
 
 	</div>

@@ -2,11 +2,11 @@
 	<nav class="navbar navbar-expand navbar-dark bg-dark">
 
 		<ul class="navbar-nav mr-auto" routerLinkActive="active">
-			<li class="nav-item"><a href="/home" class="nav-link" routerLink="home">Home </a></li>
+			<li class="nav-item" *ngIf="isLoggedIn"><a href="/home" class="nav-link" routerLink="home">Home </a></li>
 			<li class="nav-item" *ngIf="showAdminBoard"><a href="/usermanagement" class="nav-link" routerLink="usermanagement">User Management</a></li>
       <li class="nav-item" *ngIf="showAdminBoard"><a href="/exchangerate" class="nav-link" routerLink="exchangerate">Exchange Rate</a></li>
 			<li class="nav-item" *ngIf="showUserBoard"><a href="/moneytransfer" class="nav-link" *ngIf="isLoggedIn" routerLink="moneytransfer">Money Transfer</a></li>
-      <li class="nav-item" ><a href="/converter" class="nav-link" routerLink="converter">Converter</a></li>
+      <li class="nav-item" *ngIf="isLoggedIn"><a href="/converter" class="nav-link" routerLink="converter">Converter</a></li>
 		</ul>
 
 		<ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">

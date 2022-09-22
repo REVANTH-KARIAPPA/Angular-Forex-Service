@@ -15,15 +15,29 @@ export class AddexchangeComponent implements OnInit {
     currencyName: '',
     exchangeRate: 0
   };
+  errorMessage: any;
+  popup: boolean=false;
   constructor(private currencyService :CurrencyService) {
 
   }
 
   ngOnInit(): void {
+    this.popup=false;
   }
 
   onSubmit():void{
     console.log(this.form);
+    this.currencyService.addCurrency(this.form).subscribe(
+      data => {
+
+        console.log(data);
+
+      },
+      err => {
+        this.errorMessage = err.error.message;
+      }
+    );
+    this.popup=true;
   }
 
 }

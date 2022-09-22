@@ -30,7 +30,7 @@
 
               <div class="form-group">
                 <label for="rate">Exchange Rate of {{exchange.currencyName}}</label>
-                <input type="number" onkeypress="return event.charCode >= 48" min="0.1" class="form-control" name="rate" [(ngModel)]="exchange.exchangeRate" required #rate="ngModel" />
+                <input type="number" onkeypress="return event.charCode >= 48" min="0.01" step="0.1" lass="form-control" name="rate" [(ngModel)]="exchange.exchangeRate" required #rate="ngModel" />
 
               </div>
               <button class="dbutton" >Update exchange Rate</button>
